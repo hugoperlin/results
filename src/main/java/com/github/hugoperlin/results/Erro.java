@@ -8,7 +8,7 @@ package com.github.hugoperlin.results;
 
 public class Erro extends Resultado {
 
-    /**
+   /**
      * Cria um objeto que representa um resultado falho de uma
      * operação.
      * 

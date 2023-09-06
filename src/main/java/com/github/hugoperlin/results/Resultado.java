@@ -6,18 +6,18 @@ package com.github.hugoperlin.results;
  */
 
 
-public abstract class Resultado {
+public abstract class Resultado<S> {
     private String msg;
 
     public Resultado(String msg){
         this.msg = msg;
     }
 
-    public static Resultado sucesso(String msg,Object obj){
-        return new Sucesso(msg,obj);
+    public static <S> Resultado<S> sucesso(String msg,S obj){
+        return new Sucesso<S>(msg,obj);
     }
 
-    public static Resultado erro(String msg){
+    public static <S> Resultado<S> erro(String msg){
         return new Erro(msg);
     }
 
@@ -33,8 +33,8 @@ public abstract class Resultado {
         return (Erro)this;
     }
 
-    public Sucesso comoSucesso(){
-        return (Sucesso)this;
+    public Sucesso<S> comoSucesso(){
+        return (Sucesso<S>)this;
     }
 
     public String getMsg(){
