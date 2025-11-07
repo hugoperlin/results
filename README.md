@@ -128,16 +128,6 @@ E inclua a seguinte dependência:
 
 ---
 
-## ✅ Sugestões de extensão
-
-Você pode adicionar:
-
-- `Optional` para acessar valores com mais segurança
-- `map()` para composição funcional
-- Integração com serviços e validação de entidades
-
----
-
 ## 📄 Licença
 
 Código livre para uso educacional e profissional.
