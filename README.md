@@ -86,41 +86,26 @@ if(r.foiSucesso()){
 
 ## ✅ Importando no seu projeto (Maven)
 
-Como o projeto não está em um repositório Maven central, existem duas opções:
-
----
-
-### ✅ **1. Instalar no repositório local**
-
-Clone o repositório:
-
-```bash
-git clone https://github.com/hugoperlin/results.git
-cd results
+Inclua no arquivo `pom.xml` do seu projeto repositório adicional de bibliotecas:
+```xml
+    <repositories>
+		<repository>
+		    <id>jitpack.io</id>
+		    <url>https://jitpack.io</url>
+		</repository>
+	</repositories>
 ```
-
-Instale o artefato no repositório local:
-
-```bash
-mvn install
-```
-
-Depois adicione ao `pom.xml` do seu projeto:
+E inclua a seguinte dependência:
 
 ```xml
-<dependency>
-    <groupId>com.github.hugoperlin</groupId>
-    <artifactId>results</artifactId>
-    <version>1.0-SNAPSHOT</version>
-</dependency>
+
+      <dependency>
+            <groupId>com.github.hugoperlin</groupId>
+            <artifactId>results</artifactId>
+            <version>1.0.1</version>
+        </dependency>
 ```
 
----
-
-### ✅ **2. Instalar manualmente seus `.java`**
-
-Se preferir, basta copiar as classes `Resultado`, `Erro` e `Sucesso` para o seu projeto.
-Não há dependências externas.
 
 ---
 
